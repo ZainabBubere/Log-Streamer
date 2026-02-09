@@ -1,0 +1,11 @@
+<div *ngIf="errorMsg && errorMsg.length > 0">
+    {{errorMsg}}
+</div>
+<div *ngIf="lines && lines.length > 0">
+    <div *ngFor="let line of lines">
+        {{line}}
+    </div>
+</div>
+<div *ngIf="!errorMsg && lines.length == 0">
+    Waiting for server to send logs!
+</div>
